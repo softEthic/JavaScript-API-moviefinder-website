@@ -177,7 +177,7 @@ function showPosters() {
 >
 
 <button class="watchlist-btn">
-<img class="watchlist-icon" src="assets/images/watchlist-logo-active.png">
+<img class="watchlist-icon" src=("../assets/images/watchlist-logo-active.png")>
 <span>Add to Watchlist</span>
 </button>
  `;
@@ -265,8 +265,8 @@ function closeNav() {
 
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
-const EMPTY_ICON = "assets/images/watchlist-logo-active.png";
-const ACTIVE_ICON = "assets/images/watchlist-logo-active.png";
+const EMPTY_ICON = ("../assets/images/watchlist-logo-active.png");
+const ACTIVE_ICON = ("../assets/images/watchlist-logo-active.png");
 
 
 function syncWatchlistUI() {
