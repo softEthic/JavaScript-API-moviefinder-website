@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- jQuery (needed for your menu + lightbox functions) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="watchlist-container">
+  <button id="watchlistIconBtn" class="watchlist-btn" aria-label="Add to watchlist">
+  <img
+  id="watchlistIcon"
+  src="assets/images/watchlist-logo-active.png"
+  alt="Add to watchlist"
+  class="watchlist-icon">
+  </button>
+  </div>
+
+  <!-- HEADER + SEARCH -->
+  <header>
+    <button id="menuBtn" onclick="toggleMenu()">☰</button>
+    <h1>Movie Finder</h1>
+
+    <div id="searchBar">
+      <input type="text" id="txtSearch" placeholder="Search for a movie...">
+      <button onclick="searchMovies()">Search</button>
+    </div>
+  </header>
+
+  <!-- SIDE MENU -->
+  <nav>
+    <ul>
+      <li onclick="closeNav()">Close ✖</li>
+      <li onclick="Home(1)">Home</li>
+      <li onclick="Search(2)">Search</li>
+      <li onclick="Trending(3)">Trending</li>
+    </ul>
+  </nav>
+
+<div id="results"></div>
+<div id="latest"></div>
+
+
+<!-- Movie panel -->
+<div id="moviePanel">
+  <div id="controls">
+    <span id="closeBtn">X</span>
+  </div>
+  <div id="movieContent"></div>
+</div>
+
+<div class="social-icons">
+  <a href="https://dragonbit.com">
+  <img src="assets/images/dragonbit-64.png" alt="dragonbit">
+  </a>
+  <a href="https://linkedin.com">
+  <img src="assets/images/linkedin-64.png" alt="linkedin">
+  </a>
+  <a href="https://twitter.com">
+  <img src="assets/images/twitter-64.png" alt="twitter">
+  </a>
+</div>
+
+
+<div id="watchlistPanel" class="watchlist-panel">
+<h2>Your Watchlist</h2>
+<div id="watchlistMovies"></div>
+<button id="closeWatchlist">Close</button>
+</div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="hideBox()">
+    <img id="lightboxImage" src="">
+  </div>
+
+  <div id="trending-movies" class="trending-movies"></div>
+  
+  <!-- YOUR JAVASCRIPT -->
+  <script src="js/jquery.js"></script>
+  <script src="js/Movie.js"></script>
+  <script src="js/BelongsToCollection.js"></script>
+  <script src="js/MovieVideo.js"></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
